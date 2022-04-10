@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     TextView textView2;
-    EditText editText;
+    EditText editText, editText2, editText3, editText4;
     private static final String DB_URL = "jdbc:mysql://192.168.1.161/MCQ";
     private static final String USER = "user1";
     private static final String PASS = "password";
