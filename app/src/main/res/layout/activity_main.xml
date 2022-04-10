@@ -10,6 +10,7 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +18,6 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:orientation="horizontal">
-
 
     <TextView
         android:id="@+id/textView2"
@@ -62,7 +62,7 @@
 
     <Button
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:id="@+id/editText"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -113,4 +113,25 @@
         android:layout_width="325dp"
         android:layout_height="70dp" />
 
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center" >
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/questionTracker"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_width="80dp"
+            android:lineSpacingExtra="6dp"
+            android:layout_height="wrap_content"
+            android:text="counter" />
+
+    </LinearLayout>
+
 </LinearLayout>
+
