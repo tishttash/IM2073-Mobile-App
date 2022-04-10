@@ -11,7 +11,7 @@ CREATE table questionnaire (
     choice2 varchar(150),
     choice3 varchar(150),
     choice4 varchar(150),
- answer char, 
+ answer varchar(150), 
  qtyselect int,
  primary key (id)
 );
@@ -23,7 +23,7 @@ insert into questionnaire values (
     '10 minutes',
     '20 minutes',
     '40 minutes',
-    '3',
+    '20 minutes',
     0
 );
 
@@ -34,7 +34,7 @@ insert into questionnaire values (
     'Faculty',
     'Raft',
     'Waddle',
-    '4',
+    'Waddle',
     0
 );
 
@@ -45,7 +45,7 @@ insert into questionnaire values (
     '4 to 6',
     '2 to 4',
     '1 to 3',
-    '1',
+    '6 to 12',
     0
 );
 
@@ -56,7 +56,7 @@ insert into questionnaire values (
     '150',
     '200',
     '250',
-    '2',
+    '150',
     0
 );
 
@@ -67,7 +67,7 @@ insert into questionnaire values (
     'Female Duck',
     'Male Duck at Night',
     'Female and Male Duck',
-    '2',
+    'Female Duck',
     0
 );
 
@@ -78,7 +78,7 @@ insert into questionnaire values (
     'School',
     'Murder',
     'Bevy',
-    '1',
+    'Flamboyance',
     0
 );
 
@@ -89,7 +89,7 @@ insert into questionnaire values (
     'They’re just born like that',
     'Due to the food the food they eat',
     'They’re not pink',
-    '3',
+    'Due to the food the food they eat',
     0
 );
 
@@ -100,7 +100,7 @@ insert into questionnaire values (
     '40 times',
     '80 times',
     '160 times',
-    '3',
+    '80 times',
     0
 );
 
@@ -111,7 +111,7 @@ insert into questionnaire values (
     'Every 20 minutes',
     'Every 30 minutes',
     'Every 40 minutes',
-    '1',
+    'Every 10 minutes',
     0
 );
 
@@ -122,7 +122,7 @@ insert into questionnaire values (
     'Puffling',
     'Cygnets',
     'Babies',
-    '3',
+    'Cygnets',
     0
 );
 
