@@ -14,8 +14,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
         android:orientation="horizontal">
 
@@ -27,27 +27,6 @@
             android:text="Score: "
             android:textColor="#332FA2"
             android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:text="Insert Timer"
-            android:textColor="#332FA2"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/fetchdb"
-            android:layout_width="54dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="82dp"
-            android:layout_marginEnd="65dp"
-            android:layout_toStartOf="@+id/textView"
-            android:layout_toEndOf="@+id/textView2"
-            android:onClick="btnConn"
-            android:text="F" />
 
     </RelativeLayout>
 
@@ -74,75 +53,88 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/select1"
+        android:tag="select1"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:id="@+id/choice1"
+        android:background="@drawable/bgbtn"
+        android:paddingBottom="10dp"
+        android:text="select1"
+        android:onClick="btnChoice"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:text="choice1"
-        android:paddingBottom="10dp"
-        android:textSize="18sp"
-        android:background="@drawable/bgbtn"
-        android:layout_width="325dp"
-        android:layout_height="70dp" />
+        android:textSize="18sp" />
 
 
     <Button
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:id="@+id/choice2"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:text="choice2"
-        android:paddingBottom="10dp"
-        android:textSize="18sp"
-        android:background="@drawable/bgbtn"
+        android:id="@+id/select2"
+        android:tag="select2"
         android:layout_width="325dp"
-        android:layout_height="70dp" />
-
-    <Button
-        android:id="@+id/choice3"
-        android:layout_width="325dp"
-        android:layout_height="70dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:background="@drawable/bgbtn"
         android:paddingBottom="10dp"
-        android:text="choice3"
+        android:text="select2"
+        android:onClick="btnChoice"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="18sp" />
 
     <Button
+        android:id="@+id/select3"
+        android:tag="select3"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:id="@+id/choice4"
+        android:background="@drawable/bgbtn"
+        android:paddingBottom="10dp"
+        android:text="select3"
+        android:onClick="btnChoice"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:text="choice4"
-        android:paddingBottom="10dp"
-        android:textSize="18sp"
-        android:background="@drawable/bgbtn"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/select4"
+        android:tag="select4"
         android:layout_width="325dp"
-        android:layout_height="70dp" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bgbtn"
+        android:paddingBottom="10dp"
+        android:text="select4"
+        android:onClick="btnChoice"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
     <LinearLayout
-        android:layout_marginTop="25dp"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center" >
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <TextView
-            android:textAlignment="center"
-            android:id="@+id/questionTracker"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:layout_width="80dp"
-            android:lineSpacingExtra="6dp"
+        <Button
+            android:id="@+id/btntally"
+            android:layout_width="129dp"
+            android:layout_height="37dp"
+            android:text="Tally" />
+
+        <Button
+            android:id="@+id/fetchnext"
+            android:layout_width="134dp"
             android:layout_height="wrap_content"
-            android:text="counter" />
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:onClick="btnConn"
+            android:text="Next" />
 
     </LinearLayout>
 
