@@ -4,9 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/background.xml" value="0.215" />
-        <entry key="app/src/main/res/layout/activity_bar_chart.xml" value="0.15137786865234376" />
-        <entry key="app/src/main/res/layout/activity_barchart.xml" value="0.15520833333333334" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.30195312500000004" />
+        <entry key="app/src/main/res/layout/activity_bar_chart.xml" value="0.25052083333333336" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.27059906005859374" />
         <entry key="app/src/main/res/layout/activity_start.xml" value="0.2421875" />
       </map>
     </option>

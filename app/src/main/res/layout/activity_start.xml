@@ -29,7 +29,7 @@
         android:src="@drawable/bird" />
 
     <Button
-        android:id="@+id/textTitle"
+        android:id="@+id/start"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
