@@ -8,25 +8,22 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textQuestion"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
+    <ImageView
+        android:id="@+id/birdtrivia"
+        android:layout_width="390dp"
+        android:layout_height="120dp"
         android:layout_gravity="center"
-        android:layout_marginTop="65dp"
-        android:layout_marginBottom="20dp"
-        android:text="Bird Trivia"
-        android:textAlignment="center"
-        android:textColor="@color/teal_700"
-        android:textSize="35sp" />
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="35dp"
+        android:src="@drawable/birdy" />
 
     <ImageView
         android:id="@+id/bigboss"
         android:layout_width="393dp"
         android:layout_height="313dp"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
         android:src="@drawable/bird" />
 
     <Button
