@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     Button btn1, btn2, btn3, btn4;
     Button fetch1, fetch2, fetch3, fetch4, fetch5;
     Button btnresult;
-    //EditText editText;
     private static final String DB_URL = "jdbc:mysql://192.168.1.161/MCQ?allowMultiQueries=true";
     private static final String USER = "user1";
     private static final String PASS = "password";
@@ -45,11 +44,6 @@ public class MainActivity extends AppCompatActivity {
         fetch4 = (Button) findViewById(R.id.fetch4);
         btnresult = (Button) findViewById(R.id.btntally);
     }
-
-//    public void btnConn(View view) {
-//        LoadQ objSend = new LoadQ();
-//        objSend.execute("");
-//    }
 
     // QN BUTTON LOAD CALL:
     public void btnConn1(View view) {
@@ -184,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
             objTally1.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
-                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
 //                ((Button)view).setTextColor(Color.RED);
@@ -195,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
             objTally2.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
-                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
 //                ((Button)view).setTextColor(Color.RED);
@@ -206,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
             objTally3.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
-                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
 //                ((Button)view).setTextColor(Color.RED);
@@ -217,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
             objTally4.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
-                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
 //                ((Button)view).setTextColor(Color.RED);
