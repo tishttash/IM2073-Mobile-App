@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textQuestion = (TextView) findViewById(R.id.textQuestion);
-        textScore = (TextView) findViewById(R.id.textView2);
-        //textTimer = (TextView) findViewById(R.id.textView);
         btn1 = (Button) findViewById(R.id.select1);
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
