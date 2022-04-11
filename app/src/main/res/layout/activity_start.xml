@@ -11,14 +11,14 @@
     <TextView
         android:id="@+id/textQuestion"
         android:layout_width="230dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginTop="55dp"
         android:layout_marginBottom="20dp"
         android:text="Bird Trivia"
         android:textAlignment="center"
         android:textColor="@color/teal_700"
-        android:textSize="20sp" />
+        android:textSize="30sp" />
 
     <ImageView
         android:id="@+id/bigboss"
@@ -34,11 +34,11 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/teal_700"
         android:paddingBottom="10dp"
         android:text="Start Quiz"
         android:textAllCaps="false"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="25sp" />
 
     <TextView
