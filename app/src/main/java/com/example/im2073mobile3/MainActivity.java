@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     Button fetch1, fetch2, fetch3, fetch4, fetch5;
     Button fetchnext, btntally;
     //EditText editText;
-    private static final String DB_URL = "jdbc:mysql://192.168.1.161/MCQ";
+    private static final String DB_URL = "jdbc:mysql://192.168.1.161/MCQ?allowMultiQueries=true";
     private static final String USER = "user1";
     private static final String PASS = "password";
     public String answer, choice;
@@ -243,11 +243,19 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    //String query = "SELECT * from questionnaire WHERE id=10";
-                    String query = "SELECT * FROM questionnaire";
-                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+//                    Perform the 2 SQL queries below:
+//                    String query1 = "UPDATE counter SET qtyselect1 = 0, qtyselect2 = 0, qtyselect3 = 0, qtyselect4 = 0"
+//                    String query2 = "SELECT * from questionnaire WHERE id=10";
+                    String query1 = "UPDATE counter SET qtyselect1 = 0, qtyselect2 = 0, qtyselect3 = 0, qtyselect4 = 0";
+                    String query2 = "SELECT * FROM questionnaire";
+//                    STRINGBUILDER SYNTAX IF U NEED IT: TO CONCATENATE MULTIPLE LINES OF SQL QUERIES TOGETHER.
+//                    I didn't need it in this case cos have to execute both executeQuery and executeUpdate separately!
+//                    StringBuilder s = new StringBuilder();
+//                    s.append(query1);
+//                    s.append(query2);
                     Statement stmt = conn.createStatement();
-                    ResultSet resultSet = stmt.executeQuery(query);
+                    stmt.executeUpdate(query1);
+                    ResultSet resultSet = stmt.executeQuery(query2);
 
                     resultSet.first();
                     textQuestion.setText(resultSet.getString(2));
@@ -299,11 +307,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    //String query = "SELECT * from questionnaire WHERE id=10";
-                    String query = "SELECT * FROM questionnaire";
-                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    String query1 = "UPDATE counter SET qtyselect1 = 0, qtyselect2 = 0, qtyselect3 = 0, qtyselect4 = 0";
+                    String query2 = "SELECT * FROM questionnaire";
                     Statement stmt = conn.createStatement();
-                    ResultSet resultSet = stmt.executeQuery(query);
+                    stmt.executeUpdate(query1);
+                    ResultSet resultSet = stmt.executeQuery(query2);
 
                     resultSet.absolute(2);
                     textQuestion.setText(resultSet.getString(2));
@@ -355,11 +363,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    //String query = "SELECT * from questionnaire WHERE id=10";
-                    String query = "SELECT * FROM questionnaire";
-                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    String query1 = "UPDATE counter SET qtyselect1 = 0, qtyselect2 = 0, qtyselect3 = 0, qtyselect4 = 0";
+                    String query2 = "SELECT * FROM questionnaire";
                     Statement stmt = conn.createStatement();
-                    ResultSet resultSet = stmt.executeQuery(query);
+                    stmt.executeUpdate(query1);
+                    ResultSet resultSet = stmt.executeQuery(query2);
 
                     resultSet.absolute(3);
                     textQuestion.setText(resultSet.getString(2));
@@ -411,11 +419,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    //String query = "SELECT * from questionnaire WHERE id=10";
-                    String query = "SELECT * FROM questionnaire";
-                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    String query1 = "UPDATE counter SET qtyselect1 = 0, qtyselect2 = 0, qtyselect3 = 0, qtyselect4 = 0";
+                    String query2 = "SELECT * FROM questionnaire";
                     Statement stmt = conn.createStatement();
-                    ResultSet resultSet = stmt.executeQuery(query);
+                    stmt.executeUpdate(query1);
+                    ResultSet resultSet = stmt.executeQuery(query2);
 
                     resultSet.absolute(4);
                     textQuestion.setText(resultSet.getString(2));
@@ -467,11 +475,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    //String query = "SELECT * from questionnaire WHERE id=10";
-                    String query = "SELECT * FROM questionnaire";
-                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    String query1 = "UPDATE counter SET qtyselect1 = 0, qtyselect2 = 0, qtyselect3 = 0, qtyselect4 = 0";
+                    String query2 = "SELECT * FROM questionnaire";
                     Statement stmt = conn.createStatement();
-                    ResultSet resultSet = stmt.executeQuery(query);
+                    stmt.executeUpdate(query1);
+                    ResultSet resultSet = stmt.executeQuery(query2);
 
                     resultSet.absolute(5);
                     textQuestion.setText(resultSet.getString(2));
@@ -523,11 +531,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    //String query = "SELECT * from questionnaire WHERE id=10";
-                    String query = "SELECT * FROM questionnaire";
-                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    String query1 = "UPDATE counter SET qtyselect1 = 0, qtyselect2 = 0, qtyselect3 = 0, qtyselect4 = 0";
+                    String query2 = "SELECT * FROM questionnaire";
                     Statement stmt = conn.createStatement();
-                    ResultSet resultSet = stmt.executeQuery(query);
+                    stmt.executeUpdate(query1);
+                    ResultSet resultSet = stmt.executeQuery(query2);
 
                     resultSet.absolute(6);
                     textQuestion.setText(resultSet.getString(2));
@@ -579,11 +587,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    //String query = "SELECT * from questionnaire WHERE id=10";
-                    String query = "SELECT * FROM questionnaire";
-                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    String query1 = "UPDATE counter SET qtyselect1 = 0, qtyselect2 = 0, qtyselect3 = 0, qtyselect4 = 0";
+                    String query2 = "SELECT * FROM questionnaire";
                     Statement stmt = conn.createStatement();
-                    ResultSet resultSet = stmt.executeQuery(query);
+                    stmt.executeUpdate(query1);
+                    ResultSet resultSet = stmt.executeQuery(query2);
 
                     resultSet.absolute(7);
                     textQuestion.setText(resultSet.getString(2));
@@ -635,11 +643,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    //String query = "SELECT * from questionnaire WHERE id=10";
-                    String query = "SELECT * FROM questionnaire";
-                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    String query1 = "UPDATE counter SET qtyselect1 = 0, qtyselect2 = 0, qtyselect3 = 0, qtyselect4 = 0";
+                    String query2 = "SELECT * FROM questionnaire";
                     Statement stmt = conn.createStatement();
-                    ResultSet resultSet = stmt.executeQuery(query);
+                    stmt.executeUpdate(query1);
+                    ResultSet resultSet = stmt.executeQuery(query2);
 
                     resultSet.absolute(8);
                     textQuestion.setText(resultSet.getString(2));
@@ -691,11 +699,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    //String query = "SELECT * from questionnaire WHERE id=10";
-                    String query = "SELECT * FROM questionnaire";
-                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    String query1 = "UPDATE counter SET qtyselect1 = 0, qtyselect2 = 0, qtyselect3 = 0, qtyselect4 = 0";
+                    String query2 = "SELECT * FROM questionnaire";
                     Statement stmt = conn.createStatement();
-                    ResultSet resultSet = stmt.executeQuery(query);
+                    stmt.executeUpdate(query1);
+                    ResultSet resultSet = stmt.executeQuery(query2);
 
                     resultSet.absolute(9);
                     textQuestion.setText(resultSet.getString(2));
@@ -747,11 +755,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    //String query = "SELECT * from questionnaire WHERE id=10";
-                    String query = "SELECT * FROM questionnaire";
-                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    String query1 = "UPDATE counter SET qtyselect1 = 0, qtyselect2 = 0, qtyselect3 = 0, qtyselect4 = 0";
+                    String query2 = "SELECT * FROM questionnaire";
                     Statement stmt = conn.createStatement();
-                    ResultSet resultSet = stmt.executeQuery(query);
+                    stmt.executeUpdate(query1);
+                    ResultSet resultSet = stmt.executeQuery(query2);
 
                     resultSet.absolute(10);
                     textQuestion.setText(resultSet.getString(2));
