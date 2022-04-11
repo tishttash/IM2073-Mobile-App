@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 //        objSend.execute("");
 //    }
 
-    // BUTTON CLICK METHODS:
+    // QN BUTTON LOAD CALL:
     public void btnConn1(View view) {
         LoadQ1 objSend = new LoadQ1();
         objSend.execute("");
@@ -173,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
         btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
 
+    // CHOICE BUTTON CALL:
     public void btnChoice(View view) {
         Tally1 objTally1 = new Tally1();
         Tally2 objTally2 = new Tally2();
@@ -225,7 +226,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // LOAD CONTENT INTO SCREEN CLASSES AND METHODS:
+    // TALLY RESULT BUTTON CALL:
+    public void tallyResult(View view) {
+        Result result = new Result();
+        result.execute("");
+    }
+
+    // QN BUTTON LOAD CLASSES AND METHODS:
     public class LoadQ1 extends AsyncTask<String, String, String>
     {
         String msg = "";
@@ -795,7 +802,7 @@ public class MainActivity extends AppCompatActivity {
 //        }
     }
 
-    // TALLY CLASSES AND METHODS:
+    // CHOICE BUTTON CLASSES AND METHODS:
     public class Tally1 extends AsyncTask<String, String, String>
     {
         String msg = "";
@@ -965,6 +972,55 @@ public class MainActivity extends AppCompatActivity {
             catch (Exception e)
             {
                 msg = "tally error";
+                e.printStackTrace();
+            }
+            return msg;
+        }
+
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
+    }
+
+    // TALLY RESULT BUTTON CLASSES AND METHODS:
+    public class Result extends AsyncTask<String, String, String>
+    {
+        String msg = "";
+        //String text = editText.getText().toString();
+
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
+
+        @Override
+        protected String doInBackground(String... strings)
+        {
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                if(conn == null)
+                {
+                    msg = "conn == null";
+                }
+                else
+                {
+                    String query = "SELECT * FROM counter";
+                    Statement stmt = conn.createStatement();
+                    ResultSet resultSet = stmt.executeQuery(query);
+
+                    resultSet.first();
+                    btn1.setText(resultSet.getString(1));
+                    btn2.setText(resultSet.getString(2));
+                    btn3.setText(resultSet.getString(3));
+                    btn4.setText(resultSet.getString(4));
+                }
+                conn.close();
+            }
+            catch (Exception e)
+            {
+                msg = "fetch error";
                 e.printStackTrace();
             }
             return msg;

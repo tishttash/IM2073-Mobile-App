@@ -255,6 +255,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:text="Results"
+        android:onClick="tallyResult"
         android:textColor="@color/colorPrimary"
         android:textSize="15sp"
         app:backgroundTint="@color/colorBlue" />
