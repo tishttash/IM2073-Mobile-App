@@ -1,35 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartActivity">
-
-    <Button
-        android:id="@+id/start"
-        android:layout_width="220dp"
-        android:layout_height="49dp"
-        android:layout_gravity="center"
-        android:background="@drawable/bgbtn"
-        android:paddingBottom="10dp"
-        android:tag="start"
-        android:text="START QUIZ"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:background="@drawable/start_background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textQuestion"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="20dp"
+        android:text="Bird Trivia"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/bigboss"
+        android:layout_width="393dp"
+        android:layout_height="313dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/bird" />
+
+    <Button
+        android:id="@+id/textTitle"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/white"
+        android:paddingBottom="10dp"
+        android:text="Start Quiz"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bird Trivia"
-        tools:layout_editor_absoluteX="168dp"
-        tools:layout_editor_absoluteY="227dp" />
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="Good Luck!"
+        android:textColor="@color/teal_700"
+        android:textSize="18sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
 
+</LinearLayout>
