@@ -19,10 +19,10 @@ import java.sql.Statement;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView textQuestion, textScore, textTimer;
+    TextView textQuestion;
     Button btn1, btn2, btn3, btn4;
     Button fetch1, fetch2, fetch3, fetch4, fetch5;
-    Button fetchnext, btntally;
+    Button btnresult;
     //EditText editText;
     private static final String DB_URL = "jdbc:mysql://192.168.1.161/MCQ?allowMultiQueries=true";
     private static final String USER = "user1";
@@ -43,10 +43,7 @@ public class MainActivity extends AppCompatActivity {
         fetch2 = (Button) findViewById(R.id.fetch2);
         fetch3 = (Button) findViewById(R.id.fetch3);
         fetch4 = (Button) findViewById(R.id.fetch4);
-//        fetchnext = (Button) findViewById(R.id.fetchnext);
-        btntally = (Button) findViewById(R.id.btntally);
-
-        //editText = (EditText) findViewById(R.id.textInputEditText);
+        btnresult = (Button) findViewById(R.id.btntally);
     }
 
 //    public void btnConn(View view) {
@@ -62,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
         btn4 = (Button) findViewById(R.id.select4);
-        btn1.setTextColor(Color.WHITE);
-        btn2.setTextColor(Color.WHITE);
-        btn3.setTextColor(Color.WHITE);
-        btn4.setTextColor(Color.WHITE);
+        btn1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn3.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
     public void btnConn2(View view) {
         LoadQ2 objSend = new LoadQ2();
@@ -74,10 +71,10 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
         btn4 = (Button) findViewById(R.id.select4);
-        btn1.setTextColor(Color.WHITE);
-        btn2.setTextColor(Color.WHITE);
-        btn3.setTextColor(Color.WHITE);
-        btn4.setTextColor(Color.WHITE);
+        btn1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn3.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
     public void btnConn3(View view) {
         LoadQ3 objSend = new LoadQ3();
@@ -86,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
         btn4 = (Button) findViewById(R.id.select4);
-        btn1.setTextColor(Color.WHITE);
-        btn2.setTextColor(Color.WHITE);
-        btn3.setTextColor(Color.WHITE);
-        btn4.setTextColor(Color.WHITE);
+        btn1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn3.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
     public void btnConn4(View view) {
         LoadQ4 objSend = new LoadQ4();
@@ -98,10 +95,10 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
         btn4 = (Button) findViewById(R.id.select4);
-        btn1.setTextColor(Color.WHITE);
-        btn2.setTextColor(Color.WHITE);
-        btn3.setTextColor(Color.WHITE);
-        btn4.setTextColor(Color.WHITE);
+        btn1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn3.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
     public void btnConn5(View view) {
         LoadQ5 objSend = new LoadQ5();
@@ -110,10 +107,10 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
         btn4 = (Button) findViewById(R.id.select4);
-        btn1.setTextColor(Color.WHITE);
-        btn2.setTextColor(Color.WHITE);
-        btn3.setTextColor(Color.WHITE);
-        btn4.setTextColor(Color.WHITE);
+        btn1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn3.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
     public void btnConn6(View view) {
         LoadQ6 objSend = new LoadQ6();
@@ -122,10 +119,10 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
         btn4 = (Button) findViewById(R.id.select4);
-        btn1.setTextColor(Color.WHITE);
-        btn2.setTextColor(Color.WHITE);
-        btn3.setTextColor(Color.WHITE);
-        btn4.setTextColor(Color.WHITE);
+        btn1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn3.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
     public void btnConn7(View view) {
         LoadQ7 objSend = new LoadQ7();
@@ -134,10 +131,10 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
         btn4 = (Button) findViewById(R.id.select4);
-        btn1.setTextColor(Color.WHITE);
-        btn2.setTextColor(Color.WHITE);
-        btn3.setTextColor(Color.WHITE);
-        btn4.setTextColor(Color.WHITE);
+        btn1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn3.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
     public void btnConn8(View view) {
         LoadQ8 objSend = new LoadQ8();
@@ -146,10 +143,10 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
         btn4 = (Button) findViewById(R.id.select4);
-        btn1.setTextColor(Color.WHITE);
-        btn2.setTextColor(Color.WHITE);
-        btn3.setTextColor(Color.WHITE);
-        btn4.setTextColor(Color.WHITE);
+        btn1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn3.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
     public void btnConn9(View view) {
         LoadQ9 objSend = new LoadQ9();
@@ -158,10 +155,10 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
         btn4 = (Button) findViewById(R.id.select4);
-        btn1.setTextColor(Color.WHITE);
-        btn2.setTextColor(Color.WHITE);
-        btn3.setTextColor(Color.WHITE);
-        btn4.setTextColor(Color.WHITE);
+        btn1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn3.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
     public void btnConn10(View view) {
         LoadQ10 objSend = new LoadQ10();
@@ -170,10 +167,10 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
         btn4 = (Button) findViewById(R.id.select4);
-        btn1.setTextColor(Color.WHITE);
-        btn2.setTextColor(Color.WHITE);
-        btn3.setTextColor(Color.WHITE);
-        btn4.setTextColor(Color.WHITE);
+        btn1.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn2.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn3.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
+        btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
 
     public void btnChoice(View view) {
@@ -185,44 +182,44 @@ public class MainActivity extends AppCompatActivity {
         if (((((Button)view).getTag()).toString()).equals("select1")) {
             objTally1.execute("");
             if((((Button)view).getText()).equals(answer)) {
-                ((Button)view).setTextColor(Color.GREEN);
+//                ((Button)view).setTextColor(Color.GREEN);
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
             }
             else {
-                ((Button)view).setTextColor(Color.RED);
+//                ((Button)view).setTextColor(Color.RED);
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.RED));
             }
         }
         else if (((((Button)view).getTag()).toString()).equals("select2")) {
             objTally2.execute("");
             if((((Button)view).getText()).equals(answer)) {
-                ((Button)view).setTextColor(Color.GREEN);
+//                ((Button)view).setTextColor(Color.GREEN);
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
             }
             else {
-                ((Button)view).setTextColor(Color.RED);
+//                ((Button)view).setTextColor(Color.RED);
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.RED));
             }
         }
         else if (((((Button)view).getTag()).toString()).equals("select3")) {
             objTally3.execute("");
             if((((Button)view).getText()).equals(answer)) {
-                ((Button)view).setTextColor(Color.GREEN);
+//                ((Button)view).setTextColor(Color.GREEN);
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
             }
             else {
-                ((Button)view).setTextColor(Color.RED);
+//                ((Button)view).setTextColor(Color.RED);
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.RED));
             }
         }
         else if (((((Button)view).getTag()).toString()).equals("select4")) {
             objTally4.execute("");
             if((((Button)view).getText()).equals(answer)) {
-                ((Button)view).setTextColor(Color.GREEN);
+//                ((Button)view).setTextColor(Color.GREEN);
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
             }
             else {
-                ((Button)view).setTextColor(Color.RED);
+//                ((Button)view).setTextColor(Color.RED);
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.RED));
             }
         }
@@ -234,8 +231,8 @@ public class MainActivity extends AppCompatActivity {
         String msg = "";
         //String text = editText.getText().toString();
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -290,7 +287,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String msg)
         {
-            textScore.setText(msg);
+//            textScore.setText(msg);
         }
     }
     public class LoadQ2 extends AsyncTask<String, String, String>
@@ -298,8 +295,8 @@ public class MainActivity extends AppCompatActivity {
         String msg = "";
         //String text = editText.getText().toString();
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -343,19 +340,19 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
     public class LoadQ3 extends AsyncTask<String, String, String>
     {
         String msg = "";
         //String text = editText.getText().toString();
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -399,19 +396,19 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
     public class LoadQ4 extends AsyncTask<String, String, String>
     {
         String msg = "";
         //String text = editText.getText().toString();
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -455,19 +452,19 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
     public class LoadQ5 extends AsyncTask<String, String, String>
     {
         String msg = "";
         //String text = editText.getText().toString();
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -511,19 +508,19 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
     public class LoadQ6 extends AsyncTask<String, String, String>
     {
         String msg = "";
         //String text = editText.getText().toString();
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -567,19 +564,19 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
     public class LoadQ7 extends AsyncTask<String, String, String>
     {
         String msg = "";
         //String text = editText.getText().toString();
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -623,19 +620,19 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
     public class LoadQ8 extends AsyncTask<String, String, String>
     {
         String msg = "";
         //String text = editText.getText().toString();
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -679,19 +676,19 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
     public class LoadQ9 extends AsyncTask<String, String, String>
     {
         String msg = "";
         //String text = editText.getText().toString();
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -735,19 +732,19 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
     public class LoadQ10 extends AsyncTask<String, String, String>
     {
         String msg = "";
         //String text = editText.getText().toString();
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -791,11 +788,11 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
 
     // TALLY CLASSES AND METHODS:
@@ -803,8 +800,8 @@ public class MainActivity extends AppCompatActivity {
     {
         String msg = "";
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textQuestion.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -838,18 +835,18 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
     public class Tally2 extends AsyncTask<String, String, String>
     {
         String msg = "";
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -883,18 +880,18 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
     public class Tally3 extends AsyncTask<String, String, String>
     {
         String msg = "";
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -928,18 +925,18 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
     public class Tally4 extends AsyncTask<String, String, String>
     {
         String msg = "";
 
-        @Override
-        protected void onPreExecute() {textScore.setText("Please Wait...");}
+//        @Override
+//        protected void onPreExecute() {textScore.setText("Please Wait...");}
 
         @Override
         protected String doInBackground(String... strings)
@@ -973,10 +970,10 @@ public class MainActivity extends AppCompatActivity {
             return msg;
         }
 
-        @Override
-        protected void onPostExecute(String msg)
-        {
-            textScore.setText(msg);
-        }
+//        @Override
+//        protected void onPostExecute(String msg)
+//        {
+//            textScore.setText(msg);
+//        }
     }
 }
