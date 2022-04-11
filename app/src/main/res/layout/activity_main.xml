@@ -19,17 +19,17 @@
         android:layout_marginRight="30dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:text="Score: "
-            android:textColor="#332FA2"
-            android:textSize="18sp" />
-
     </RelativeLayout>
 
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Score: "
+        android:textColor="#332FA2"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="365dp"
@@ -118,8 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:gravity="center">
 
         <Button
             android:id="@+id/btntally"
@@ -127,14 +126,52 @@
             android:layout_height="37dp"
             android:text="Tally" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
         <Button
-            android:id="@+id/fetchnext"
-            android:layout_width="134dp"
+            android:id="@+id/fetch1"
+            android:layout_width="94dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="65dp"
-            android:layout_marginEnd="65dp"
-            android:onClick="btnConn"
-            android:text="Next" />
+            android:layout_weight="1"
+            android:onClick="btnConn1"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/fetch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnConn2"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/fetch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnConn3"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/fetch4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnConn4"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/fetch5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnConn5"
+            android:text="5" />
 
     </LinearLayout>
 

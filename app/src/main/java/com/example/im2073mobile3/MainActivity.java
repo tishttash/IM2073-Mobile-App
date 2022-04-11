@@ -19,7 +19,9 @@ import java.sql.Statement;
 public class MainActivity extends AppCompatActivity {
 
     TextView textQuestion, textScore, textTimer;
-    Button btn1, btn2, btn3, btn4, fetchnext, btntally;
+    Button btn1, btn2, btn3, btn4;
+    Button fetch1, fetch2, fetch3, fetch4, fetch5;
+    Button fetchnext, btntally;
     //EditText editText;
     private static final String DB_URL = "jdbc:mysql://192.168.1.161/MCQ";
     private static final String USER = "user1";
@@ -38,14 +40,38 @@ public class MainActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.select2);
         btn3 = (Button) findViewById(R.id.select3);
         btn4 = (Button) findViewById(R.id.select4);
-        fetchnext = (Button) findViewById(R.id.fetchnext);
+        fetch1 = (Button) findViewById(R.id.fetch1);
+        fetch2 = (Button) findViewById(R.id.fetch2);
+        fetch3 = (Button) findViewById(R.id.fetch3);
+        fetch4 = (Button) findViewById(R.id.fetch4);
+//        fetchnext = (Button) findViewById(R.id.fetchnext);
         btntally = (Button) findViewById(R.id.btntally);
 
         //editText = (EditText) findViewById(R.id.textInputEditText);
     }
 
-    public void btnConn(View view) {
-        Send objSend = new Send();
+//    public void btnConn(View view) {
+//        LoadQ objSend = new LoadQ();
+//        objSend.execute("");
+//    }
+    public void btnConn1(View view) {
+        LoadQ1 objSend = new LoadQ1();
+        objSend.execute("");
+    }
+    public void btnConn2(View view) {
+        LoadQ2 objSend = new LoadQ2();
+        objSend.execute("");
+    }
+    public void btnConn3(View view) {
+        LoadQ3 objSend = new LoadQ3();
+        objSend.execute("");
+    }
+    public void btnConn4(View view) {
+        LoadQ4 objSend = new LoadQ4();
+        objSend.execute("");
+    }
+    public void btnConn5(View view) {
+        LoadQ5 objSend = new LoadQ5();
         objSend.execute("");
     }
 
@@ -93,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public class Send extends AsyncTask<String, String, String>
+    public class LoadQ1 extends AsyncTask<String, String, String>
     {
         String msg = "";
         //String text = editText.getText().toString();
@@ -114,21 +140,247 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    //String query = "INSERT into questionnaire (question) VALUES ('"+text+"')";
-                    String query = "SELECT * from questionnaire WHERE id=10";
+                    //String query = "SELECT * from questionnaire WHERE id=10";
+                    String query = "SELECT * FROM questionnaire";
                     //TODO: add sql statement to reset counter table values to 0 0 0 0
                     Statement stmt = conn.createStatement();
                     ResultSet resultSet = stmt.executeQuery(query);
 
-                    while(resultSet.next())
-                    {
-                        textQuestion.setText(resultSet.getString(2));
-                        btn1.setText(resultSet.getString(3));
-                        btn2.setText(resultSet.getString(4));
-                        btn3.setText(resultSet.getString(5));
-                        btn4.setText(resultSet.getString(6));
-                        answer = resultSet.getString(7);
-                    }
+                    resultSet.first();
+                    textQuestion.setText(resultSet.getString(2));
+                    btn1.setText(resultSet.getString(3));
+                    btn2.setText(resultSet.getString(4));
+                    btn3.setText(resultSet.getString(5));
+                    btn4.setText(resultSet.getString(6));
+                    answer = resultSet.getString(7);
+//                    while(resultSet.next())
+//                    {
+//
+//                    }
+                    msg = "LOADED | " + "Ans: " + answer;
+                }
+                conn.close();
+            }
+            catch (Exception e)
+            {
+                msg = "fetch error";
+                e.printStackTrace();
+            }
+            return msg;
+        }
+
+        @Override
+        protected void onPostExecute(String msg)
+        {
+            textScore.setText(msg);
+        }
+    }
+    public class LoadQ2 extends AsyncTask<String, String, String>
+    {
+        String msg = "";
+        //String text = editText.getText().toString();
+
+        @Override
+        protected void onPreExecute() {textScore.setText("Please Wait...");}
+
+        @Override
+        protected String doInBackground(String... strings)
+        {
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                if(conn == null)
+                {
+                    msg = "conn == null";
+                }
+                else
+                {
+                    //String query = "SELECT * from questionnaire WHERE id=10";
+                    String query = "SELECT * FROM questionnaire";
+                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    Statement stmt = conn.createStatement();
+                    ResultSet resultSet = stmt.executeQuery(query);
+
+                    resultSet.absolute(2);
+                    textQuestion.setText(resultSet.getString(2));
+                    btn1.setText(resultSet.getString(3));
+                    btn2.setText(resultSet.getString(4));
+                    btn3.setText(resultSet.getString(5));
+                    btn4.setText(resultSet.getString(6));
+                    answer = resultSet.getString(7);
+//                    while(resultSet.next())
+//                    {
+//
+//                    }
+                    msg = "LOADED | " + "Ans: " + answer;
+                }
+                conn.close();
+            }
+            catch (Exception e)
+            {
+                msg = "fetch error";
+                e.printStackTrace();
+            }
+            return msg;
+        }
+
+        @Override
+        protected void onPostExecute(String msg)
+        {
+            textScore.setText(msg);
+        }
+    }
+    public class LoadQ3 extends AsyncTask<String, String, String>
+    {
+        String msg = "";
+        //String text = editText.getText().toString();
+
+        @Override
+        protected void onPreExecute() {textScore.setText("Please Wait...");}
+
+        @Override
+        protected String doInBackground(String... strings)
+        {
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                if(conn == null)
+                {
+                    msg = "conn == null";
+                }
+                else
+                {
+                    //String query = "SELECT * from questionnaire WHERE id=10";
+                    String query = "SELECT * FROM questionnaire";
+                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    Statement stmt = conn.createStatement();
+                    ResultSet resultSet = stmt.executeQuery(query);
+
+                    resultSet.absolute(3);
+                    textQuestion.setText(resultSet.getString(2));
+                    btn1.setText(resultSet.getString(3));
+                    btn2.setText(resultSet.getString(4));
+                    btn3.setText(resultSet.getString(5));
+                    btn4.setText(resultSet.getString(6));
+                    answer = resultSet.getString(7);
+//                    while(resultSet.next())
+//                    {
+//
+//                    }
+                    msg = "LOADED | " + "Ans: " + answer;
+                }
+                conn.close();
+            }
+            catch (Exception e)
+            {
+                msg = "fetch error";
+                e.printStackTrace();
+            }
+            return msg;
+        }
+
+        @Override
+        protected void onPostExecute(String msg)
+        {
+            textScore.setText(msg);
+        }
+    }
+    public class LoadQ4 extends AsyncTask<String, String, String>
+    {
+        String msg = "";
+        //String text = editText.getText().toString();
+
+        @Override
+        protected void onPreExecute() {textScore.setText("Please Wait...");}
+
+        @Override
+        protected String doInBackground(String... strings)
+        {
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                if(conn == null)
+                {
+                    msg = "conn == null";
+                }
+                else
+                {
+                    //String query = "SELECT * from questionnaire WHERE id=10";
+                    String query = "SELECT * FROM questionnaire";
+                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    Statement stmt = conn.createStatement();
+                    ResultSet resultSet = stmt.executeQuery(query);
+
+                    resultSet.absolute(4);
+                    textQuestion.setText(resultSet.getString(2));
+                    btn1.setText(resultSet.getString(3));
+                    btn2.setText(resultSet.getString(4));
+                    btn3.setText(resultSet.getString(5));
+                    btn4.setText(resultSet.getString(6));
+                    answer = resultSet.getString(7);
+//                    while(resultSet.next())
+//                    {
+//
+//                    }
+                    msg = "LOADED | " + "Ans: " + answer;
+                }
+                conn.close();
+            }
+            catch (Exception e)
+            {
+                msg = "fetch error";
+                e.printStackTrace();
+            }
+            return msg;
+        }
+
+        @Override
+        protected void onPostExecute(String msg)
+        {
+            textScore.setText(msg);
+        }
+    }
+    public class LoadQ5 extends AsyncTask<String, String, String>
+    {
+        String msg = "";
+        //String text = editText.getText().toString();
+
+        @Override
+        protected void onPreExecute() {textScore.setText("Please Wait...");}
+
+        @Override
+        protected String doInBackground(String... strings)
+        {
+            try
+            {
+                Class.forName("com.mysql.jdbc.Driver");
+                Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                if(conn == null)
+                {
+                    msg = "conn == null";
+                }
+                else
+                {
+                    //String query = "SELECT * from questionnaire WHERE id=10";
+                    String query = "SELECT * FROM questionnaire";
+                    //TODO: add sql statement to reset counter table values to 0 0 0 0
+                    Statement stmt = conn.createStatement();
+                    ResultSet resultSet = stmt.executeQuery(query);
+
+                    resultSet.absolute(5);
+                    textQuestion.setText(resultSet.getString(2));
+                    btn1.setText(resultSet.getString(3));
+                    btn2.setText(resultSet.getString(4));
+                    btn3.setText(resultSet.getString(5));
+                    btn4.setText(resultSet.getString(6));
+                    answer = resultSet.getString(7);
+//                    while(resultSet.next())
+//                    {
+//
+//                    }
                     msg = "LOADED | " + "Ans: " + answer;
                 }
                 conn.close();
