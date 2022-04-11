@@ -2,6 +2,7 @@ package com.example.im2073mobile3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -187,36 +188,44 @@ public class MainActivity extends AppCompatActivity {
             objTally1.execute("");
             if((((Button)view).getText()).equals(answer)) {
                 ((Button)view).setTextColor(Color.GREEN);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
             }
             else {
                 ((Button)view).setTextColor(Color.RED);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.RED));
             }
         }
         else if (((((Button)view).getTag()).toString()).equals("select2")) {
             objTally2.execute("");
             if((((Button)view).getText()).equals(answer)) {
                 ((Button)view).setTextColor(Color.GREEN);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
             }
             else {
                 ((Button)view).setTextColor(Color.RED);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.RED));
             }
         }
         else if (((((Button)view).getTag()).toString()).equals("select3")) {
             objTally3.execute("");
             if((((Button)view).getText()).equals(answer)) {
                 ((Button)view).setTextColor(Color.GREEN);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
             }
             else {
                 ((Button)view).setTextColor(Color.RED);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.RED));
             }
         }
         else if (((((Button)view).getTag()).toString()).equals("select4")) {
             objTally4.execute("");
             if((((Button)view).getText()).equals(answer)) {
                 ((Button)view).setTextColor(Color.GREEN);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
             }
             else {
                 ((Button)view).setTextColor(Color.RED);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.RED));
             }
         }
     }
