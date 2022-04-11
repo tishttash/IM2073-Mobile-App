@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
             objTally1.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
-                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
 //                ((Button)view).setTextColor(Color.RED);
@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
             objTally2.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
-                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
 //                ((Button)view).setTextColor(Color.RED);
@@ -206,7 +206,7 @@ public class MainActivity extends AppCompatActivity {
             objTally3.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
-                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
 //                ((Button)view).setTextColor(Color.RED);
@@ -217,7 +217,7 @@ public class MainActivity extends AppCompatActivity {
             objTally4.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
-                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
 //                ((Button)view).setTextColor(Color.RED);
