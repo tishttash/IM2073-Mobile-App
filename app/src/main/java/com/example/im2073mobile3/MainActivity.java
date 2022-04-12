@@ -1,7 +1,5 @@
 package com.example.im2073mobile3;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.AsyncTask;
@@ -10,29 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
 public class MainActivity extends AppCompatActivity {
-
     TextView textQuestion;
     Button btn1, btn2, btn3, btn4;
     Button fetch1, fetch2, fetch3, fetch4, fetch5;
     Button btnresult;
-    private static final String DB_URL = "jdbc:mysql://192.168.1.161/MCQ?allowMultiQueries=true";
+    //EditText editText;
+    private static final String DB_URL = "jdbc:mysql://192.168.17.213/MCQ?allowMultiQueries=true";
     private static final String USER = "user1";
     private static final String PASS = "password";
     public String answer, choice;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         textQuestion = (TextView) findViewById(R.id.textQuestion);
         btn1 = (Button) findViewById(R.id.select1);
         btn2 = (Button) findViewById(R.id.select2);
@@ -44,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
         fetch4 = (Button) findViewById(R.id.fetch4);
         btnresult = (Button) findViewById(R.id.btntally);
     }
-
+    //    public void btnConn(View view) {
+//        LoadQ objSend = new LoadQ();
+//        objSend.execute("");
+//    }
     // QN BUTTON LOAD CALL:
     public void btnConn1(View view) {
         LoadQ1 objSend = new LoadQ1();
@@ -166,18 +163,17 @@ public class MainActivity extends AppCompatActivity {
         btn3.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
         btn4.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(98, 0, 238)));
     }
-
     // CHOICE BUTTON CALL:
     public void btnChoice(View view) {
         Tally1 objTally1 = new Tally1();
         Tally2 objTally2 = new Tally2();
         Tally3 objTally3 = new Tally3();
         Tally4 objTally4 = new Tally4();
-
         if (((((Button)view).getTag()).toString()).equals("select1")) {
             objTally1.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
@@ -189,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
             objTally2.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
@@ -200,6 +197,7 @@ public class MainActivity extends AppCompatActivity {
             objTally3.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
@@ -211,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
             objTally4.execute("");
             if((((Button)view).getText()).equals(answer)) {
 //                ((Button)view).setTextColor(Color.GREEN);
+                ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.GREEN));
                 ((Button)view).setBackgroundTintList(ColorStateList.valueOf(Color.rgb(28, 156, 23)));
             }
             else {
@@ -219,22 +218,18 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
     // TALLY RESULT BUTTON CALL:
     public void tallyResult(View view) {
         Result result = new Result();
         result.execute("");
     }
-
     // QN BUTTON LOAD CLASSES AND METHODS:
     public class LoadQ1 extends AsyncTask<String, String, String>
     {
         String msg = "";
         //String text = editText.getText().toString();
-
 //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -261,7 +256,6 @@ public class MainActivity extends AppCompatActivity {
                     Statement stmt = conn.createStatement();
                     stmt.executeUpdate(query1);
                     ResultSet resultSet = stmt.executeQuery(query2);
-
                     resultSet.first();
                     textQuestion.setText(resultSet.getString(2));
                     btn1.setText(resultSet.getString(3));
@@ -284,7 +278,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
         @Override
         protected void onPostExecute(String msg)
         {
@@ -295,10 +288,8 @@ public class MainActivity extends AppCompatActivity {
     {
         String msg = "";
         //String text = editText.getText().toString();
-
 //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -317,7 +308,6 @@ public class MainActivity extends AppCompatActivity {
                     Statement stmt = conn.createStatement();
                     stmt.executeUpdate(query1);
                     ResultSet resultSet = stmt.executeQuery(query2);
-
                     resultSet.absolute(2);
                     textQuestion.setText(resultSet.getString(2));
                     btn1.setText(resultSet.getString(3));
@@ -340,7 +330,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
@@ -351,10 +340,8 @@ public class MainActivity extends AppCompatActivity {
     {
         String msg = "";
         //String text = editText.getText().toString();
-
 //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -373,7 +360,6 @@ public class MainActivity extends AppCompatActivity {
                     Statement stmt = conn.createStatement();
                     stmt.executeUpdate(query1);
                     ResultSet resultSet = stmt.executeQuery(query2);
-
                     resultSet.absolute(3);
                     textQuestion.setText(resultSet.getString(2));
                     btn1.setText(resultSet.getString(3));
@@ -396,7 +382,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
@@ -407,10 +392,8 @@ public class MainActivity extends AppCompatActivity {
     {
         String msg = "";
         //String text = editText.getText().toString();
-
 //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -429,7 +412,6 @@ public class MainActivity extends AppCompatActivity {
                     Statement stmt = conn.createStatement();
                     stmt.executeUpdate(query1);
                     ResultSet resultSet = stmt.executeQuery(query2);
-
                     resultSet.absolute(4);
                     textQuestion.setText(resultSet.getString(2));
                     btn1.setText(resultSet.getString(3));
@@ -452,7 +434,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
@@ -463,10 +444,8 @@ public class MainActivity extends AppCompatActivity {
     {
         String msg = "";
         //String text = editText.getText().toString();
-
 //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -485,7 +464,6 @@ public class MainActivity extends AppCompatActivity {
                     Statement stmt = conn.createStatement();
                     stmt.executeUpdate(query1);
                     ResultSet resultSet = stmt.executeQuery(query2);
-
                     resultSet.absolute(5);
                     textQuestion.setText(resultSet.getString(2));
                     btn1.setText(resultSet.getString(3));
@@ -508,7 +486,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
@@ -519,10 +496,8 @@ public class MainActivity extends AppCompatActivity {
     {
         String msg = "";
         //String text = editText.getText().toString();
-
 //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -541,7 +516,6 @@ public class MainActivity extends AppCompatActivity {
                     Statement stmt = conn.createStatement();
                     stmt.executeUpdate(query1);
                     ResultSet resultSet = stmt.executeQuery(query2);
-
                     resultSet.absolute(6);
                     textQuestion.setText(resultSet.getString(2));
                     btn1.setText(resultSet.getString(3));
@@ -564,7 +538,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
@@ -575,10 +548,8 @@ public class MainActivity extends AppCompatActivity {
     {
         String msg = "";
         //String text = editText.getText().toString();
-
 //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -597,7 +568,6 @@ public class MainActivity extends AppCompatActivity {
                     Statement stmt = conn.createStatement();
                     stmt.executeUpdate(query1);
                     ResultSet resultSet = stmt.executeQuery(query2);
-
                     resultSet.absolute(7);
                     textQuestion.setText(resultSet.getString(2));
                     btn1.setText(resultSet.getString(3));
@@ -620,7 +590,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
@@ -631,10 +600,8 @@ public class MainActivity extends AppCompatActivity {
     {
         String msg = "";
         //String text = editText.getText().toString();
-
 //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -653,7 +620,6 @@ public class MainActivity extends AppCompatActivity {
                     Statement stmt = conn.createStatement();
                     stmt.executeUpdate(query1);
                     ResultSet resultSet = stmt.executeQuery(query2);
-
                     resultSet.absolute(8);
                     textQuestion.setText(resultSet.getString(2));
                     btn1.setText(resultSet.getString(3));
@@ -676,7 +642,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
@@ -687,10 +652,8 @@ public class MainActivity extends AppCompatActivity {
     {
         String msg = "";
         //String text = editText.getText().toString();
-
 //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -709,7 +672,6 @@ public class MainActivity extends AppCompatActivity {
                     Statement stmt = conn.createStatement();
                     stmt.executeUpdate(query1);
                     ResultSet resultSet = stmt.executeQuery(query2);
-
                     resultSet.absolute(9);
                     textQuestion.setText(resultSet.getString(2));
                     btn1.setText(resultSet.getString(3));
@@ -732,7 +694,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
@@ -743,10 +704,8 @@ public class MainActivity extends AppCompatActivity {
     {
         String msg = "";
         //String text = editText.getText().toString();
-
 //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -765,7 +724,6 @@ public class MainActivity extends AppCompatActivity {
                     Statement stmt = conn.createStatement();
                     stmt.executeUpdate(query1);
                     ResultSet resultSet = stmt.executeQuery(query2);
-
                     resultSet.absolute(10);
                     textQuestion.setText(resultSet.getString(2));
                     btn1.setText(resultSet.getString(3));
@@ -788,22 +746,18 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
 //            textScore.setText(msg);
 //        }
     }
-
     // CHOICE BUTTON CLASSES AND METHODS:
     public class Tally1 extends AsyncTask<String, String, String>
     {
         String msg = "";
-
-//        @Override
+        //        @Override
 //        protected void onPreExecute() {textQuestion.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -835,7 +789,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
@@ -845,10 +798,8 @@ public class MainActivity extends AppCompatActivity {
     public class Tally2 extends AsyncTask<String, String, String>
     {
         String msg = "";
-
-//        @Override
+        //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -880,7 +831,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
@@ -890,10 +840,8 @@ public class MainActivity extends AppCompatActivity {
     public class Tally3 extends AsyncTask<String, String, String>
     {
         String msg = "";
-
-//        @Override
+        //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -925,7 +873,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
@@ -935,10 +882,8 @@ public class MainActivity extends AppCompatActivity {
     public class Tally4 extends AsyncTask<String, String, String>
     {
         String msg = "";
-
-//        @Override
+        //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -970,23 +915,19 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
 //            textScore.setText(msg);
 //        }
     }
-
     // TALLY RESULT BUTTON CLASSES AND METHODS:
     public class Result extends AsyncTask<String, String, String>
     {
         String msg = "";
         //String text = editText.getText().toString();
-
 //        @Override
 //        protected void onPreExecute() {textScore.setText("Please Wait...");}
-
         @Override
         protected String doInBackground(String... strings)
         {
@@ -1003,7 +944,6 @@ public class MainActivity extends AppCompatActivity {
                     String query = "SELECT * FROM counter";
                     Statement stmt = conn.createStatement();
                     ResultSet resultSet = stmt.executeQuery(query);
-
                     resultSet.first();
                     btn1.setText(resultSet.getString(1));
                     btn2.setText(resultSet.getString(2));
@@ -1019,7 +959,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return msg;
         }
-
 //        @Override
 //        protected void onPostExecute(String msg)
 //        {
